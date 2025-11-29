@@ -30,17 +30,6 @@ namespace Zadatak_2
         public MainWindow()
         {
             InitializeComponent();
-
-            //double ukupnoStan = 0;
-            //int brojac = 0;
-            //foreach (opstina item in opstine)
-            //{
-            //    ukupnoStan += item.brstan;
-            //    brojac++;
-            //}
-            //double prosek = ukupnoStan / brojac;
-
-            //prikazProseka.Text = prosek.ToString();
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)
