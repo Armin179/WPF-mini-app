@@ -1,0 +1,76 @@
+﻿    <Window x:Class="Zadatak_1.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:Zadatak_1"
+            mc:Ignorable="d"
+            Closing="MainWindow_Closing"
+            Title="MainWindow" Height="450" Width="800">
+    <!--
+        U padajuću listu (ComboBox) dodati tri stavke “crveno, zeleno, plavo”.
+    U tekstu polju (TextBox) sa desne strane treba ispisivati događaje jedan ispod drugog zajedno sa najvažnijim podacima (EventArgs e) tog događaja.
+    Pratiti sledeće događaje:
+    Na formi
+    Na formi
+    Load
+    FormClosing
+    FormClosed
+    MouseClick – prikazuje lokaciju gde klika mišem
+    MouseMove
+    Na padajućoj listi (ComboBox)
+    SelectedValueChanged
+    Na radio dugmadima
+    CheckedChanged
+    
+    Izborom jedne od stavki iz padajuće liste obojiti pozadinu forme u odgovarajuću boju.
+    Onemogućiti zatvaranje forme ako je označeno radio dugme “zatvaranje nije dozvoljeno”
+    -->
+    
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*">
+                
+                </ColumnDefinition >
+                <ColumnDefinition Width="*">
+
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*">
+                </RowDefinition>
+                <RowDefinition Height="*">
+                </RowDefinition>
+                <RowDefinition Height="*">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+
+
+        <RadioButton x:Name="rbDozvoljeno" Content="Zatvaranje Dozvoljeno" Width="140" Height="20" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+        <RadioButton x:Name="rbZabranjeno" Content="Zatvaranje zabranjeno" Width="140" Height="20" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="0"/>
+
+
+        <ComboBox x:Name="BojeComboBox"  Width="200" Height="20" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+            <ComboBoxItem Content="Crveno"/>
+            <ComboBoxItem Content="Zeleno"/>
+            <ComboBoxItem Content="Plavo"/>
+            </ComboBox>
+
+            <Button x:Name="dugme" Content="ZATVORI" Width="200" Height="20" VerticalAlignment="Top" Grid.Column="0" Grid.Row="2" Margin="0 20"></Button>
+
+                <TextBox x:Name="textBox" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap" Margin="20"></TextBox>
+    <!--
+                Grid.Column="1" → postavlja TextBox u drugu kolonu (pošto se kolone broje od 0).
+
+    Grid.Row="0" → počinje u prvom redu.
+
+    Grid.RowSpan="3" → zauzima sva tri reda (jer si definisao 3 reda u Gridu).
+
+    AcceptsReturn="True" → omogućava višelinijski unos teksta.
+
+    TextWrapping="Wrap" → automatski prelazi tekst u novi red.
+
+    VerticalScrollBarVisibility="Auto" → dodaje skrol ako tekst postane duži.
+            -->
+        </Grid>
+    </Window>
