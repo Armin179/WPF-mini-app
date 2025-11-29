@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Zadatak_2
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
         public class opstina
         {
             public int broj { get; set; }
